@@ -1,0 +1,5 @@
+<% web =  "PLATFORM=web -r features/page " %>
+<% report = "-f pretty -f json -o report.json -f html -o report.html" %>
+default: <%= report %> <%= web %> BROWSER=chrome -r features/pages -r features/step_definitions -r features/support
+#firefox: <%= report %> <%= web %> BROWSER=firefox
+#iexplore: <%= report %> <%= web %> BROWSER=iexplore
